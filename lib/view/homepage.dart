@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Center(child: CustomClock())],
+        children: const [Center(child: CustomClock())],
       ),
     );
   }
