@@ -43,24 +43,38 @@ class ClockPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
+    var line = Paint()..color = Colors.white;
+
     var secX = centerX + 80 * cos(dateTime.second * 6 * pi / 180);
-    var secY = centerY + 80 * sin(dateTime.second * 6 * pi / 180);
-    var minX = centerX + 40 * cos(dateTime.minute * 6 * pi / 180);
-    var minY = centerY + 40 * sin(dateTime.minute * 6 * pi / 180);
+    var secY = centerX + 80 * sin(dateTime.second * 6 * pi / 180);
+    var minX = centerX + 60 * cos(dateTime.minute * 6 * pi / 180);
+    var minY = centerX + 60 * sin(dateTime.minute * 6 * pi / 180);
     var hrX = centerX +
-        60 * cos((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
-    var hrY = centerY +
-        60 * sin((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
+        40 * cos((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
+    var hrY = centerX +
+        40 * sin((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
 
     canvas.drawCircle(center, radius - 40,
         innerpaint); //it is inbuilt property to draw the shape circle
     canvas.drawCircle(center, radius - 40, outlinepaint);
 
-    canvas.drawLine(center, Offset(minX, minY), minLine);
     canvas.drawLine(center, Offset(secX, secY), secLine);
+
+    canvas.drawLine(center, Offset(minX, minY), minLine);
+
     canvas.drawLine(center, Offset(hrX, hrY), hrLine);
 
     canvas.drawCircle(center, 10, innercircle);
+
+    var outerCircleRadius = radius;
+    var innerCircleRadius = radius - 14;
+    for (var i = 0; i < 360; i += 12) {
+      var x1 = centerX + outerCircleRadius * cos(i * pi / 180);
+      var y1 = centerX + outerCircleRadius * sin(i * pi / 180);
+      var x2 = centerX + innerCircleRadius * cos(i * pi / 180);
+      var y2 = centerX + innerCircleRadius * sin(i * pi / 180);
+      canvas.drawLine(Offset(x1, y1), Offset(x2, y2), line);
+    }
   }
 
   @override
