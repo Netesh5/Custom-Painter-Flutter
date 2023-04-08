@@ -1,16 +1,18 @@
 # custompainterapp
 
-A new Flutter project.
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is demonstration of implementating custom painter
 
-A few resources to get you started if this is your first Flutter project:
+## Demo 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Clock 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Simulator Screen Recording - iPhone 14 Pro - 2023-04-07 at 12 59 16](https://user-images.githubusercontent.com/48326144/230723321-03c2d2a1-1c60-4cbb-9f14-5b578b59e49f.gif)
+
+---
+* Custom Clipper with Hero Animation
+
+![Simulator Screen Recording - iPhone 14 Pro - 2023-04-08 at 18 59 05](https://user-images.githubusercontent.com/48326144/230723419-947252df-077b-4f48-870f-60c0d059e22a.gif)
