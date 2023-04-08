@@ -1,3 +1,4 @@
+import 'package:custompainterapp/view/arc/arc.dart';
 import 'package:custompainterapp/view/clock/clock.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,12 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [Center(child: CustomClock())],
+        children: const [
+          // Center(child: CustomClock())
+          Center(
+            child: ArcHomepage(),
+          )
+        ],
       ),
     );
   }

@@ -58,11 +58,9 @@ class ClockPainter extends CustomPainter {
         innerpaint); //it is inbuilt property to draw the shape circle
     canvas.drawCircle(center, radius - 40, outlinepaint);
 
-    canvas.drawLine(center, Offset(secX, secY), secLine);
-
-    canvas.drawLine(center, Offset(minX, minY), minLine);
-
     canvas.drawLine(center, Offset(hrX, hrY), hrLine);
+    canvas.drawLine(center, Offset(minX, minY), minLine);
+    canvas.drawLine(center, Offset(secX, secY), secLine);
 
     canvas.drawCircle(center, 10, innercircle);
 
