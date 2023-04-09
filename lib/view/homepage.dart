@@ -1,6 +1,7 @@
 import 'package:custompainterapp/view/arc/arc.dart';
 import 'package:custompainterapp/view/clip/clip.dart';
 import 'package:custompainterapp/view/clock/clock.dart';
+import 'package:custompainterapp/view/curves/curves.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +23,9 @@ class HomePage extends StatelessWidget {
           // Center(
           //   child: ArcHomepage(),
           // )
-          Center(child: ClipHomePage())
+          // Center(child: ClipHomePage())
+
+          CurvesHomePage()
         ],
       ),
     );
